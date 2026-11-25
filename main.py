@@ -4,14 +4,16 @@
 Writes a single commit-message line for a bug fix that made everything
 worse, to /output/entry.txt.
 
-The joke: a typo in the error message was "fixed", so the application
-still crashes -- only now it does so in perfect grammar. The repair
-polished the wording of the disaster instead of stopping it.
+The joke: somebody "fixed" a typo in the error message, so nothing about
+the crash itself changed -- the crash is simply grammatically correct
+now. The repair polished the wording of the disaster instead of
+stopping it, which is exactly the kind of fix that makes everything
+worse while looking like progress in the log.
 """
 
 import os
 
-ENTRY = "fix: typo in the error message; app now crashes in perfect grammar"
+ENTRY = "fix: typo in the error message \u2014 the crash is now grammatically correct"
 
 OUTPUT_PATH = "/output/entry.txt"
 
